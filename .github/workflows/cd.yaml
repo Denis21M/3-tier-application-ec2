@@ -17,7 +17,7 @@ jobs:
         with:
             ssh-private-key: ${{ secrets.EC2_PRIVATE_KEY }}
 
-      - name: Deploy Docker containers on EC2 instance
+      - name: Deploy Docker containers on EC2
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} "
             # Pull latest images
